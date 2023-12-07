@@ -12,6 +12,11 @@ import {Container} from 'react-bootstrap'
 export default function App() {
   
   const [soundName, setSoundName] = useState('Heater Kit');
+  const [volume, setVolume] = useState(50);
+
+  // const handleVolume = useCallback((newValue)=>{
+  //   setVolume(newValue);
+  // })
   
   const handleState = useCallback((newValue)=>{
     setSoundName(newValue);
@@ -34,8 +39,8 @@ export default function App() {
         <Col xs={7}>
           {drumPads}
         </Col>
-        
-        <Control name={soundName}/>
+
+        <Control name={soundName} />
         
       </Row>
     </Container>
