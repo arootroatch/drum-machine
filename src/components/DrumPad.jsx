@@ -12,30 +12,39 @@ export default function DrumPad(props){
         "boxShadow": "5px 3px 3px grey"
     });
 
+    function onKeydown(e) {
+        if (e.code === props.code) {
+            console.log(props.name);
+            document.getElementById(props.name).click();
+            setButtonStyles({
+                "margin": "5px",
+                "height": "100px",
+                "width": "100px",
+                "boxShadow": "none",
+                "transform": "translate(5px, 3px)"
+            })
+        }
+    }
+    
+    function onKeyup(e) {
+        if (e.code === props.code) {
+            setButtonStyles({
+                "margin": "5px",
+                "height": "100px",
+                "width": "100px",
+                "boxShadow": "5px 3px 3px grey"  
+            })
+        }
+    }
+
     useEffect((e)=> {
-        document.addEventListener("keydown", (e)=>{
-            if (e.code === props.code) {
-                document.getElementById(props.name).click();
-                setButtonStyles({
-                    "margin": "5px",
-                    "height": "100px",
-                    "width": "100px",
-                    "boxShadow": "none",
-                    "transform": "translate(5px, 3px)"
-                })
-            }
-        })
-        document.addEventListener("keyup", (e)=>{
-            if (e.code === props.code) {
-                setButtonStyles({
-                    "margin": "5px",
-                    "height": "100px",
-                    "width": "100px",
-                    "boxShadow": "5px 3px 3px grey"  
-                })
-            }
-        })
-    }, []);
+        document.addEventListener("keydown", onKeydown);
+        document.addEventListener("keyup", onKeyup);
+        return()=>{
+            document.removeEventListener("keydown", onKeydown);
+            document.removeEventListener('keyup',onKeyup);
+        }
+    }, [props.name]);
 
     function grabNamePlaySound(e){
         props.onChange(e.target.id);

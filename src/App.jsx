@@ -1,11 +1,12 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Row} from 'react-bootstrap';
 import {Col} from 'react-bootstrap';
 import DrumPad from './components/DrumPad';
 import Control from './components/Control';
-import buttons from "./buttons.json"
+import bankA from "./bankA.json";
+import bankB from './bankB.json';
 import {Container} from 'react-bootstrap'
 
 
@@ -13,19 +14,36 @@ export default function App() {
   
   const [soundName, setSoundName] = useState('Heater Kit');
   
-  
-  
   const handleState = useCallback((newValue)=>{
     setSoundName(newValue);
   }, []);
-  
-  const [drumPads, setDrumPads] = useState(buttons.map(data => {
-    return <DrumPad name={data.name[0]} letter={data.letter} sound={data.sound[0]} code={data.code} key={data.id} onChange={handleState}/>
-  }))
 
-  // const bankChange = useCallback(setDrumPads(buttons.map(data => {
-  //   return <DrumPad name={data.name[1]} letter={data.letter} sound={data.sound[1]} code={data.code} key={data.id} onChange={handleState}/>
-  // })))
+
+  const [buttonPressed, setButtonPressed] = useState("a");
+
+  const [drumPads, setDrumPads] = useState(bankA.map(data =>{
+    return <DrumPad name={data.name} letter={data.letter} sound={data.sound} code={data.code} key={data.id} onChange={handleState}/>
+  }));
+
+  const switchBank = (newValue)=>{
+    setButtonPressed(newValue);
+  }
+
+  useEffect(()=>{  
+    if (buttonPressed==='a'){
+      setDrumPads(bankA.map(data=>{
+        return <DrumPad name={data.name} letter={data.letter} sound={data.sound} code={data.code} key={data.id} onChange={handleState}/>
+      }));
+      setSoundName('Heater Kit')
+    } else if (buttonPressed==='b'){
+      setDrumPads(bankB.map(data =>{
+        return <DrumPad name={data.name} letter={data.letter} sound={data.sound} code={data.code} key={data.id} onChange={handleState}/>
+      }));
+      setSoundName('Piano Kit')
+    }
+  },[buttonPressed])
+
+
   
   const appStyle ={
     "minWidth": "700px",
@@ -39,7 +57,7 @@ export default function App() {
           {drumPads}
         </Col>
 
-        <Control name={soundName} />
+        <Control name={soundName} onChange={switchBank}/>
         
       </Row>
     </Container>
