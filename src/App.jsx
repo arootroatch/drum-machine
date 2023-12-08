@@ -12,21 +12,20 @@ import {Container} from 'react-bootstrap'
 export default function App() {
   
   const [soundName, setSoundName] = useState('Heater Kit');
-  const [volume, setVolume] = useState(50);
-
-  // const handleVolume = useCallback((newValue)=>{
-  //   setVolume(newValue);
-  // })
+  
+  
   
   const handleState = useCallback((newValue)=>{
     setSoundName(newValue);
   }, []);
   
-  const drumPads = buttons.map(data => {
-    return <DrumPad name={data.name} letter={data.letter} sound={data.sound} code={data.code} key={data.id} onChange={handleState}/>
-  })
-  
-  
+  const [drumPads, setDrumPads] = useState(buttons.map(data => {
+    return <DrumPad name={data.name[0]} letter={data.letter} sound={data.sound[0]} code={data.code} key={data.id} onChange={handleState}/>
+  }))
+
+  // const bankChange = useCallback(setDrumPads(buttons.map(data => {
+  //   return <DrumPad name={data.name[1]} letter={data.letter} sound={data.sound[1]} code={data.code} key={data.id} onChange={handleState}/>
+  // })))
   
   const appStyle ={
     "minWidth": "700px",

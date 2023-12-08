@@ -10,17 +10,32 @@
   font-size: 20px;
   height: 50px;
   position: relative;
-  top: 105px;
+  top: 60px;
 }
 
 #volume {
   position: relative;
-  top: 130px;
+  top: 85px;
 }
 
 .drum-pad{
   box-shadow: 5px 3px 3px grey;
  
+}
+.drum-pad:active{
+  box-shadow: none;
+  transform: translate(5px, 3px);
+}
+
+h1{
+  font-family: monospace;
+  font-style: italic;
+}
+
+.bank {
+  position: relative;
+  top: 120px;
+  box-shadow: 5px 3px 3px grey;
 }
 .drum-pad:active{
   box-shadow: none;

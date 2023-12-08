@@ -2,64 +2,64 @@
     {
         "id": 1,
         "letter":"Q",
-        "sound":"https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3",
-        "name": "Heater 1",
+        "sound":["https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3","https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3"],
+        "name": ["Heater 1","Chord 1"],
         "code": "KeyQ"
     },
     {
         "id": 2,
         "letter":"W",
-        "sound":"https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3",
-        "name":"Heater 2",
+        "sound":["https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3","https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3"],
+        "name":["Heater 2","Chord 2"],
         "code": "KeyW"
     },
     {
         "id": 3,
         "letter":"E",
-        "sound":"https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3",
-        "name":"Heater 3",
+        "sound":["https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3","https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3"],
+        "name":["Heater 3", "Chord 3"],
         "code": "KeyE"
     },
     {
         "id": 4,
         "letter":"A",
-        "sound":"https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3",
-        "name":"Heater 4",
+        "sound":["https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3","https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3"],
+        "name":["Heater 4", "Shaker"],
         "code": "KeyA"
     },
     {
         "id": 5,
         "letter":"S",
-        "sound":"https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3",
-        "name":"Clap",
+        "sound":["https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3","https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3"],
+        "name":["Clap","Open Hi Hat"],
         "code": "KeyS"
     },
     {
         "id": 6,
         "letter":"D",
-        "sound":"https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3",
-        "name": "Open Hi Hat",
+        "sound":["https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3","https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3"],
+        "name": ["Open Hi Hat", "Closed Hi Hat"],
         "code": "KeyD"
     },
     {
         "id": 7,
         "letter":"Z",
-        "sound":"https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3",
-        "name": "Kick n Hat",
+        "sound":["https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3","https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3"],
+        "name": ["Kick n Hat", "Punchy Kick"],
         "code": "KeyZ"
     },
     {
         "id": 8,
         "letter":"X",
-        "sound":"https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3",
-        "name": "Kick",
+        "sound":["https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3","https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3"],
+        "name": ["Kick", "Side Stick"],
         "code": "KeyX"
     },
     {
         "id": 9,
         "letter":"C",
-        "sound":"https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3",
-        "name": "Closed Hi Hat",
+        "sound": ["https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3","https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3"],
+        "name": ["Closed Hi Hat","Snare"],
         "code": "KeyC"
     }
     
