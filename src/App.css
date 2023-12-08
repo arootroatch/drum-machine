@@ -35,9 +35,14 @@ h1{
 .bank {
   position: relative;
   top: 120px;
-  box-shadow: 5px 3px 3px grey;
 }
 .drum-pad:active{
   box-shadow: none;
   transform: translate(5px, 3px);
 }
+
+#a{
+  box-shadow: none;
+  background-color: #0045ab;
+}
+

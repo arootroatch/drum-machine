@@ -14,7 +14,6 @@ export default function DrumPad(props){
 
     function onKeydown(e) {
         if (e.code === props.code) {
-            console.log(props.name);
             document.getElementById(props.name).click();
             setButtonStyles({
                 "margin": "5px",
