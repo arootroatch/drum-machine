@@ -30,6 +30,20 @@
   transform: translate(5px, 3px);
 }
 
+@media (hover:none) {
+  .drum-pad{
+    box-shadow: none;
+    margin: 5px;
+    height: 100px;
+    width: 100px
+  }
+  .drum-pad:active{
+    box-shadow: none;
+    transform: none;
+  }
+  
+}
+
 h1{
   font-family: monospace;
   font-style: italic;
