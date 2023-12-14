@@ -6,10 +6,6 @@ export default function DrumPad(props){
    
 
     const [buttonStyles, setButtonStyles] = useState({
-        "margin": "5px",
-        "height": "100px",
-        "width": "100px",
-        "boxShadow": "5px 3px 3px grey"
     });
 
     function onKeydown(e) {
@@ -27,11 +23,7 @@ export default function DrumPad(props){
     
     function onKeyup(e) {
         if (e.code === props.code) {
-            setButtonStyles({
-                "margin": "5px",
-                "height": "100px",
-                "width": "100px",
-                "boxShadow": "5px 3px 3px grey"  
+            setButtonStyles({ 
             })
         }
     }

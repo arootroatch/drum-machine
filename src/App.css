@@ -20,6 +20,9 @@
 
 .drum-pad{
   box-shadow: 5px 3px 3px grey;
+  margin: 5px;
+  height: 100px;
+  width: 100px
  
 }
 .drum-pad:active{
@@ -35,10 +38,6 @@ h1{
 .bank {
   position: relative;
   top: 120px;
-}
-.drum-pad:active{
-  box-shadow: none;
-  transform: translate(5px, 3px);
 }
 
 #a{
